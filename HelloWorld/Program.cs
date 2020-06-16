@@ -235,7 +235,66 @@ namespace HelloWorld
         //    int postFireBoxes = 22;
         //    Console.WriteLine("She started with " + (postFireBoxes* 2 - purchasedBoxes) + " boxes");
         //}
+        //------- CONDITIONALS --------------------------------------------------------------------------------------------------------------------------
+        //{
+        //    int age = 42;
+        //    if (age >= 16)
+        //    {
+        //        Console.WriteLine($"You are {age}, so you are legal to drive");
+        //    };
+        //    ___________________________
+        //    int hoursOfSleep = 12;
+        //    if (hoursOfSleep >= 8)
+        //    {
+        //        Console.WriteLine("You are likely to feel more rested.");
+        //    };
+        //    if (hoursOfSleep == 12)
+        //    {
+        //        Console.WriteLine("He is deffinitely well rested!");
+        //    };
+        //    ___________________________
+        //    int heightInInches = 73;
+        //    if (heightInInches >= 60)
+        //    {
+        //        Console.WriteLine("You are tall enough to ride");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("I'm sorry, you are not tall enough to ride");
+        //    };
+        //    ___________________________
+        //    int heightInInches = 42;
+        //    if (heightInInches >= 60)
+        //    {
+        //        Console.WriteLine("You are tall enough to ride.");
+        //    }
+        //    else if (heightInInches >= 30)
+        //    {
+        //        Console.WriteLine("Try the teacups. They look fun.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("I'm sorry, you are not tall enough to ride");
+        //    };
+        //    _____SWITCH CASE_________________________
+        //    string ageGroup = "adult";
+        //    switch (ageGroup)
+        //    {
+        //        case "adult":
+        //            Console.WriteLine("You can ride the rollercoaster!");
+        //            break;
+        //        case "youngster":
+        //            Console.WriteLine("The teacups are fun.");
+        //            break;
+        //        default:
+        //            Console.WriteLine("Oh, you must be a toddler. Toddle on!");
+        //            break;
+        //    }
+        //}
+//------- NEXT THING ---------------------------------------------------------------------------------------------------------------
+        {
 
+        }
     }
 }
 
