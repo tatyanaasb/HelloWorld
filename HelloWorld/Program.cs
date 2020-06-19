@@ -349,46 +349,94 @@ namespace HelloWorld
         //        }
         //    }
         //}
-        //---------- WHILE LOOPS ------------------------------------------------------------------------------------------------------------------------
-        {
-            //-------While-------
-            int count = 1;
-            while (count < 11)
-            {
-                Console.WriteLine("The count is " + count);
-                count++;
-            }
+        //-------- WHILE LOOPS ------------------------------------------------------------------------------------------------------------------------
+        //{
+        //    //-------While-------
+        //    int count = 1;
+        //    while (count < 11)
+        //    {
+        //        Console.WriteLine("The count is " + count);
+        //        count++;
+        //    }
 
-            //-------DO While Loop-------
-            string poridgeTemperature;
+        //    //-------DO While Loop-------
+        //    string poridgeTemperature;
+        //    do
+        //    {
+        //        Console.WriteLine("Please specify porridge temperature.");
+        //        Console.WriteLine("Type \"help\" to list options.");
+        //        poridgeTemperature = Console.ReadLine();
+        //        if (poridgeTemperature.Equals("help"))
+        //        {
+        //            Console.WriteLine("Options: too hot, too cold, just right");
+        //        }
+        //    } while (poridgeTemperature.Equals("help"));
+
+        //    //-------Infinite Loop-------
+        //    while (true)
+        //    {
+        //        Console.WriteLine("I will run forever");
+        //        Console.WriteLine("Or until you figure out how to stop me!");
+        //    }
+        //}
+        //------- PRACTICE --------------------------------------------------------------------------------------------------------------------------------
+        {
+            //-------Enter a Message--------
+            string userMessage;
+            int index = 1;
+
+            ////---One Way-- -
+            //do
+            //{
+            //    Console.WriteLine("Please enter a message");
+            //    Console.WriteLine("Exit by typing \"gb\"");
+            //    userMessage = Console.ReadLine();
+            //    if (userMessage == "gb")
+            //    {
+            //        break;
+            //    }
+            //} while (true);
+            ////----Another Complicated Way----learning diferent ways of doing the same thing----
+            //do
+            //{
+            //    Console.WriteLine("Please enter a message");
+            //    Console.WriteLine("Exit by typing \"gb\"");
+            //    if (userMessage == "gb")
+            //    {
+            //        break;
+            //    }
+            //    userMessage = Console.ReadLine();
+            //    string[] message = { userMessage };
+            //    for (int i = 0; i < message.Length; i++)
+            //    {
+            //        Console.WriteLine(message[i]);
+            //    }
+            //} while (true);
+
+            //---- *BEST* Way?----
             do
             {
-                Console.WriteLine("Please specify porridge temperature.");
-                Console.WriteLine("Type \"help\" to list options.");
-                poridgeTemperature = Console.ReadLine();
-                if (poridgeTemperature.Equals("help"))
-                {
-                    Console.WriteLine("Options: too hot, too cold, just right");
-                }
-            } while (poridgeTemperature.Equals("help"));
+                Console.WriteLine("Please enter a message");
+                userMessage = Console.ReadLine();
+                Console.WriteLine("\n" + index + " " + userMessage);
+                index++;
+            } while (index <= 5);
 
-            //-------Enter a Message--------
-            {
-                string userMessage;
-                do
-                {
-                    Console.WriteLine("Please enter a message");
-                    Console.WriteLine("Exit by typing \"goodbye\"");
-                    userMessage = Console.ReadLine();
-                    if (userMessage == "goodbye")
-                    {
-                        break;
-                    }
-                    Console.WriteLine("\n");
-                } while (true);
-            }
             //-------Pick a Number-------
-
+            string guess;
+            string myNumber = "2020";
+            do
+            {
+                Console.WriteLine("Can you guess the number I picked");
+                guess = Console.ReadLine();
+                Console.WriteLine("Try again...\n");
+                if (guess == myNumber) 
+                {
+                    Console.WriteLine("You got it!");
+                    break;
+                }
+            } while (guess != myNumber);
+          
         }
     }
 }
