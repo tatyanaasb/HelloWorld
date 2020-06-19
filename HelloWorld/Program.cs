@@ -6,7 +6,7 @@ namespace HelloWorld
 //------- HelloWorld -------------------------------------------------------------------------------------------------
 {
     class Program
-{
+    {
         static void Main(string[] args)
         //{
         //    Console.WriteLine("Hello World!");
@@ -87,6 +87,8 @@ namespace HelloWorld
 
         //    Console.WriteLine("Escaping, the use of special characters in strings. \nLike this new line");
         //    Console.WriteLine("\tAnd like this paragraph indent");
+        //    Console.WriteLine("Type \"menu\" to list options.<--activates quotations w/o disrupting code");
+
         //}
 
         //------- CODE WORKOUT -------------------------------------------------------------------------------------------------
@@ -291,63 +293,103 @@ namespace HelloWorld
         //            break;
         //    }
         //}
-        ------- BRANCHING STATEMENTS ---------------------------------------------------------------------------------------------------------------
-        {
-            //-------Break Statement-------
-            while (true)
-            {
-                Console.WriteLine("What is your favorite color?");
-                string favoriteColor = Console.ReadLine();
+        //------- BRANCHING STATEMENTS ---------------------------------------------------------------------------------------------------------------
+        //{
+        //    //-------Break Statement-------
+        //    while (true)
+        //    {
+        //        Console.WriteLine("What is your favorite color?");
+        //        string favoriteColor = Console.ReadLine();
 
-                if (favoriteColor == "Blue")
-                {
-                    Console.WriteLine("Auuuuuuuugh!");
-                    Console.WriteLine("You're just making Monty Python references.");
-                    Console.WriteLine("Get out!");
-                    break;
-                }
-    Console.WriteLine($"Your favorite color is {favoriteColor.ToLower()}");
-            }
-        }
+        //        if (favoriteColor == "Blue")
+        //        {
+        //            Console.WriteLine("Auuuuuuuugh!");
+        //            Console.WriteLine("You're just making Monty Python references.");
+        //            Console.WriteLine("Get out!");
+        //            break;
+        //        }
+        //        Console.WriteLine($"Your favorite color is {favoriteColor.ToLower()}");
+        //    }
+        //}
+        //{
+        //    //--------Continue Statement-------
+        //    for (int count = 1; count <= 10; count++)
+        //    {
+        //        if (count % 3 == 0)
+        //        {
+        //            continue;
+        //        }
+        //        Console.WriteLine("Count is " + count);
+        //    }
+        //}
+        ////-------Return Statement--------
+        ////written from instructions, breaks code because its supposed to act as an example of RETURN statement
+        ////not functional example to run and see clear results!
+        //{
+        //    {
+        //        Console.WriteLine("Message for 42: " + chooseMessage(42));
+        //        Console.WriteLine("Message for 23: " + chooseMessage(23));
+        //    }
+        //    /*public*/ static string chooseMessage(int input)
+        //    {
+        //        if (input % 2 == 0)
+        //        {
+        //            return "Even Steven!";
+        //        }
+        //        return "You're odd!";
+        //    }
+        //}
+        ////--------Nested Loops--------
+        //{
+        //    for (int hours = 1; hours < 3; hours++)
+        //    {
+        //        for (int minutes = 0; minutes < 60; minutes += 5)
+        //        {
+        //            Console.WriteLine($"The time is {hours:00}:{minutes:00}");
+        //        }
+        //    }
+        //}
+        //---------- WHILE LOOPS ------------------------------------------------------------------------------------------------------------------------
         {
-            //--------Continue Statement-------
-            for (int count = 1; count <= 10; count++)
+            //-------While-------
+            int count = 1;
+            while (count < 11)
             {
-                if (count % 3 == 0)
-                {
-                    continue;
-                }
-                Console.WriteLine("Count is " + count);
+                Console.WriteLine("The count is " + count);
+                count++;
             }
-        }
-        //-------Return Statement--------
-        //written from instructions, breaks code because its supposed to act as an example of RETURN statement
-        //not functional example to run and see clear results!
-        {
-            {
-                Console.WriteLine("Message for 42: " + chooseMessage(42));
-                Console.WriteLine("Message for 23: " + chooseMessage(23));
-            }
-            /*public*/ static string chooseMessage(int input)
-{
-    if (input % 2 == 0)
-    {
-        return "Even Steven!";
-    }
-    return "You're odd!";
-}
-        }
-        //--------Nested Loops--------
-        {
-            for (int hours = 1; hours< 3; hours++)
-            {
-                for (int minutes = 0; minutes< 60; minutes += 5)
-                {
-                    Console.WriteLine($"The time is {hours:00}:{minutes:00}");
-                }
-            }
-        }
 
+            //-------DO While Loop-------
+            string poridgeTemperature;
+            do
+            {
+                Console.WriteLine("Please specify porridge temperature.");
+                Console.WriteLine("Type \"help\" to list options.");
+                poridgeTemperature = Console.ReadLine();
+                if (poridgeTemperature.Equals("help"))
+                {
+                    Console.WriteLine("Options: too hot, too cold, just right");
+                }
+            } while (poridgeTemperature.Equals("help"));
+
+            //-------Enter a Message--------
+            {
+                string userMessage;
+                do
+                {
+                    Console.WriteLine("Please enter a message");
+                    Console.WriteLine("Exit by typing \"goodbye\"");
+                    userMessage = Console.ReadLine();
+                    if (userMessage == "goodbye")
+                    {
+                        break;
+                    }
+                    Console.WriteLine("\n");
+                } while (true);
+            }
+            //-------Pick a Number-------
+
+        }
     }
 }
 
