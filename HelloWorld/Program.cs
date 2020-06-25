@@ -416,26 +416,75 @@ namespace HelloWorld
             //---- *BEST* Way?----
             do
             {
-                Console.WriteLine("Please enter a message");
+                Console.WriteLine("Please enter a message\n");
                 userMessage = Console.ReadLine();
                 Console.WriteLine("\n" + index + " " + userMessage);
                 index++;
             } while (index <= 5);
 
             //-------Pick a Number-------
-            string guess;
+            string numberGuess = "";
             string myNumber = "2020";
+            int guessCount = 0;
+            int guessLimit = 3;
+            bool outOfGuesses = false;
             do
             {
-                Console.WriteLine("Can you guess the number I picked");
-                guess = Console.ReadLine();
-                Console.WriteLine("Try again...\n");
-                if (guess == myNumber) 
+                if (guessCount < guessLimit)
                 {
-                    Console.WriteLine("You got it!");
-                    break;
+                    Console.WriteLine("\nCan you guess the number I picked");
+                    numberGuess = Console.ReadLine();
+                    guessCount++;
+                    if (numberGuess == myNumber)
+                    {
+                        Console.WriteLine("You got it!");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Try again...\n");
+                    }
                 }
-            } while (guess != myNumber);
+                else
+                {
+                    outOfGuesses = true;
+                }
+            } while (numberGuess != myNumber && !outOfGuesses);
+            if (outOfGuesses)
+            {
+                Console.WriteLine("You've exhausted the maximum guesses, come back later.");
+            }
+
+            //--------Atm--------
+            string atmPinEntry = "";
+            string atmPIN = "0987";
+            int pinEntryCount = 0;
+            int pinEntryLimit = 3;
+            bool outOfPinEntries = false;
+
+            while (atmPinEntry != atmPIN && !outOfPinEntries)
+            {
+                if (pinEntryCount < pinEntryLimit)
+                {
+                    Console.WriteLine("\nPlease enter a pin");
+                    atmPinEntry = Console.ReadLine();
+                    pinEntryCount++;
+                    if (atmPinEntry == atmPIN)
+                    {
+                        Console.WriteLine("\nWelcome, congrats on entering your PIN correctly!\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Try again...\n");
+                    }
+                }
+                else
+                {
+                    outOfPinEntries = true;
+                    Console.WriteLine("\nSorry, you only get 3 tries to enter a correct PIN. Come back later\n");
+                }
+            }
+            
           
         }
     }
