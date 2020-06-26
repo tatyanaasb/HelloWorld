@@ -3,12 +3,18 @@ using System.Runtime.CompilerServices;
 
 namespace HelloWorld
 
-//------- HelloWorld -------------------------------------------------------------------------------------------------
+////------- HelloWorld -------------------------------------------------------------------------------------------------
 {
     class Program
     {
         static void Main(string[] args)
-        //{
+        {//<----- START
+            //Comment out AND Uncomment areas with brackets specifying "<--START" & "<--FINISH" to not break code while running.
+            //Code is writen this way only for learning purpose of specific subject while having everything in the same place. 
+        }//<----- FINISH
+
+
+        //{//<----- START
         //    Console.WriteLine("Hello World!");
         //    Console.WriteLine("This is how we start this coding thing!");
         //    Console.WriteLine(42);
@@ -20,9 +26,12 @@ namespace HelloWorld
         //    Console.WriteLine("Goodbye World!");
 
         //    Console.ReadLine();
-        //}
-        //-------- PRIMITIVES ----------------------------------------------------------------------------------------------
-        //{
+        //}//<---- FINISH
+
+
+        ////-------- PRIMITIVES ----------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    double doubleValue = 2.16440330489723961032;
         //    Console.Writeline(doubleValue);
 
@@ -30,9 +39,12 @@ namespace HelloWorld
         //    Console.Writeline(floatValue);
 
         //    Console.Readline();
-        //}
-        //-------- STRINGS -------------------------------------------------------------------------------------------------
-        //{
+        //}//<----- FINISH
+
+
+        ////-------- STRINGS -------------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    int numberOfSuits = 4;
         //    Console.WriteLine("I have " + numberOfSuits + " suits.");
         //    ________________________________________
@@ -52,9 +64,12 @@ namespace HelloWorld
         //        Console.WriteLine("This is odd, because, you know,");
         //        Console.WriteLine("They hadn't any feet.");
         //    };
-        //}
+        //}//<----- FINISH
+
+
         //    _________________________________________
-        //{
+
+        //{//<----- START
         //    string myGreeting = "Helllo";
         //    Console.WriteLine(myGreeting.ToUpper());
         //    Console.WriteLine(myGreeting.ToLower());
@@ -65,9 +80,12 @@ namespace HelloWorld
 
         //    if (response.ToLower().Equals("pink"))
         //    Console.WriteLine("Pink roses are better than red roses.");
-        //}
+        //}//<----- FINISH
+
+
         //    ______________________________________________
-        //{
+
+        //{//<----- START
         //    string palindrome = "A dog, a panic, in a pagoda";
         //    string whatsPalindrome = "I dont know what is the meaning of the first string";
         //    int palindromeLength = palindrome.Length;
@@ -88,11 +106,12 @@ namespace HelloWorld
         //    Console.WriteLine("Escaping, the use of special characters in strings. \nLike this new line");
         //    Console.WriteLine("\tAnd like this paragraph indent");
         //    Console.WriteLine("Type \"menu\" to list options.<--activates quotations w/o disrupting code");
+        //}//<----- FINISH
 
-        //}
 
-        //------- CODE WORKOUT -------------------------------------------------------------------------------------------------
-        //{
+        ////------- CODE WORKOUT -------------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    //-------First/Last Name-------
         //    Console.WriteLine("Hello, \nWhat is your first name?");
         //    string firstName = Console.ReadLine();
@@ -175,9 +194,13 @@ namespace HelloWorld
         //    {
         //        Console.WriteLine("\nPASSWORD DOES NOT MATCH, PLEASE TRY AGAIN");
         //    };
-        //}
-        //--------- OPERATORS & EXPRESSION ----mini exercises-------------------------------------------------------------------------------
-        //{
+        //}//<----- FINISH
+
+
+
+        ////--------- OPERATORS & EXPRESSION ----mini exercises-------------------------------------------------------------------------------
+
+        //{//<----- START
         //    //--------Muffin Recipe-------
         //    int flowerExpected = 7;
         //    int flowerIn = 2;
@@ -236,9 +259,12 @@ namespace HelloWorld
         //    int purchasedBoxes = 7;
         //    int postFireBoxes = 22;
         //    Console.WriteLine("She started with " + (postFireBoxes* 2 - purchasedBoxes) + " boxes");
-        //}
-        //------- CONDITIONALS --------------------------------------------------------------------------------------------------------------------------
-        //{
+        //}//<----- FINISH
+
+
+        ////------- CONDITIONALS --------------------------------------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    int age = 42;
         //    if (age >= 16)
         //    {
@@ -292,9 +318,12 @@ namespace HelloWorld
         //            Console.WriteLine("Oh, you must be a toddler. Toddle on!");
         //            break;
         //    }
-        //}
-        //------- BRANCHING STATEMENTS ---------------------------------------------------------------------------------------------------------------
-        //{
+        //}//<----- FINISH
+
+
+        ////------- BRANCHING STATEMENTS ---------------------------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    //-------Break Statement-------
         //    while (true)
         //    {
@@ -310,8 +339,9 @@ namespace HelloWorld
         //        }
         //        Console.WriteLine($"Your favorite color is {favoriteColor.ToLower()}");
         //    }
-        //}
-        //{
+        //}//<----- FINISH
+
+        //{//<----- START
         //    //--------Continue Statement-------
         //    for (int count = 1; count <= 10; count++)
         //    {
@@ -321,11 +351,12 @@ namespace HelloWorld
         //        }
         //        Console.WriteLine("Count is " + count);
         //    }
-        //}
-        ////-------Return Statement--------
-        ////written from instructions, breaks code because its supposed to act as an example of RETURN statement
-        ////not functional example to run and see clear results!
-        //{
+        //}//<----- FINISH
+
+        //{//<----- START
+        //    //-------Return Statement--------
+        //      //written from instructions, breaks code because its supposed to act as an example of RETURN statement
+        //      //not functional example to run and see clear results!
         //    {
         //        Console.WriteLine("Message for 42: " + chooseMessage(42));
         //        Console.WriteLine("Message for 23: " + chooseMessage(23));
@@ -338,9 +369,10 @@ namespace HelloWorld
         //        }
         //        return "You're odd!";
         //    }
-        //}
-        ////--------Nested Loops--------
-        //{
+        //}//<----- FINISH
+
+        //{//<----- START
+        //    //--------Nested Loops--------
         //    for (int hours = 1; hours < 3; hours++)
         //    {
         //        for (int minutes = 0; minutes < 60; minutes += 5)
@@ -348,9 +380,12 @@ namespace HelloWorld
         //            Console.WriteLine($"The time is {hours:00}:{minutes:00}");
         //        }
         //    }
-        //}
-        //-------- WHILE LOOPS ------------------------------------------------------------------------------------------------------------------------
-        //{
+        //}//<----- FINISH
+
+
+        ////-------- WHILE LOOPS ------------------------------------------------------------------------------------------------------------------------
+
+        //{//<----- START
         //    //-------While-------
         //    int count = 1;
         //    while (count < 11)
@@ -378,115 +413,127 @@ namespace HelloWorld
         //        Console.WriteLine("I will run forever");
         //        Console.WriteLine("Or until you figure out how to stop me!");
         //    }
+        //}//<----- FINISH
+
+
+        ////------- PRACTICE --------------------------------------------------------------------------------------------------------------------------------
+
+        //{//<----- START
+        //    //-------Enter a Message--------
+        //    string userMessage;
+        //    int index = 1;
+
+        ////    //---One Way----Keep commented out to see other ways
+        ////    do
+        ////    {
+        ////        Console.WriteLine("Please enter a message");
+        ////        Console.WriteLine("Exit by typing \"gb\"");
+        ////        userMessage = Console.ReadLine();
+        ////        if (userMessage == "gb")
+        ////        {
+        ////            break;
+        ////        }
+        ////    } while (true);
+
+        ////    //----Another Complicated Way----Keep commented out to see other ways
+        ////    //learning diferent ways of doing the same thing----
+        ////    do
+        ////    {
+        ////        Console.WriteLine("Please enter a message");
+        ////        Console.WriteLine("Exit by typing \"gb\"");
+        ////        if (userMessage == "gb")
+        ////        {
+        ////            break;
+        ////        }
+        ////        userMessage = Console.ReadLine();
+        ////        string[] message = { userMessage };
+        ////        for (int i = 0; i < message.Length; i++)
+        ////        {
+        ////            Console.WriteLine(message[i]);
+        ////        }
+        ////    } while (true);
+
+        //    //---- *BEST* Way?----
+        //    do
+        //    {
+        //        Console.WriteLine("Please enter a message\n");
+        //        userMessage = Console.ReadLine();
+        //        Console.WriteLine("\n" + index + " " + userMessage);
+        //        index++;
+        //    } while (index <= 5);
+        //}//<----- FINISH
+
+
+        //{//<----- START
+        //    //-------Pick a Number-------
+        //    string numberGuess = "";
+        //    string myNumber = "2020";
+        //    int guessCount = 0;
+        //    int guessLimit = 3;
+        //    bool outOfGuesses = false;
+        //    do
+        //    {
+        //        if (guessCount < guessLimit)
+        //        {
+        //            Console.WriteLine("\nCan you guess the number I picked");
+        //            numberGuess = Console.ReadLine();
+        //            guessCount++;
+        //            if (numberGuess == myNumber)
+        //            {
+        //                Console.WriteLine("You got it!");
+        //                break;
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("Try again...\n");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            outOfGuesses = true;
+        //        }
+        //    } while (numberGuess != myNumber && !outOfGuesses);
+        //    if (outOfGuesses)
+        //    {
+        //        Console.WriteLine("You've exhausted the maximum guesses, come back later.");
+        //    }
+        //}//<----- FINISH
+
+
+        //{//<----- START
+        //    //--------Atm PIN--------
+        //    string atmPinEntry = "";
+        //    string atmPIN = "0987";
+        //    int pinEntryCount = 0;
+        //    int pinEntryLimit = 3;
+        //    bool outOfPinEntries = false;
+
+        //    while (atmPinEntry != atmPIN && !outOfPinEntries)
+        //    {
+        //        if (pinEntryCount < pinEntryLimit)
+        //        {
+        //            Console.WriteLine("\nPlease enter a pin");
+        //            atmPinEntry = Console.ReadLine();
+        //            pinEntryCount++;
+        //            if (atmPinEntry == atmPIN)
+        //            {
+        //                Console.WriteLine("\nWelcome, congrats on entering your PIN correctly!\n");
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("Try again...\n");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            outOfPinEntries = true;
+        //            Console.WriteLine("\nSorry, you only get 3 tries to enter a correct PIN. Come back later\n");
+        //        }
+        //    }        
         //}
-        //------- PRACTICE --------------------------------------------------------------------------------------------------------------------------------
-        {
-            //-------Enter a Message--------
-            string userMessage;
-            int index = 1;
+        //}//<----- FINISH
 
-            ////---One Way-- -
-            //do
-            //{
-            //    Console.WriteLine("Please enter a message");
-            //    Console.WriteLine("Exit by typing \"gb\"");
-            //    userMessage = Console.ReadLine();
-            //    if (userMessage == "gb")
-            //    {
-            //        break;
-            //    }
-            //} while (true);
-            ////----Another Complicated Way----learning diferent ways of doing the same thing----
-            //do
-            //{
-            //    Console.WriteLine("Please enter a message");
-            //    Console.WriteLine("Exit by typing \"gb\"");
-            //    if (userMessage == "gb")
-            //    {
-            //        break;
-            //    }
-            //    userMessage = Console.ReadLine();
-            //    string[] message = { userMessage };
-            //    for (int i = 0; i < message.Length; i++)
-            //    {
-            //        Console.WriteLine(message[i]);
-            //    }
-            //} while (true);
 
-            //---- *BEST* Way?----
-            do
-            {
-                Console.WriteLine("Please enter a message\n");
-                userMessage = Console.ReadLine();
-                Console.WriteLine("\n" + index + " " + userMessage);
-                index++;
-            } while (index <= 5);
-
-            //-------Pick a Number-------
-            string numberGuess = "";
-            string myNumber = "2020";
-            int guessCount = 0;
-            int guessLimit = 3;
-            bool outOfGuesses = false;
-            do
-            {
-                if (guessCount < guessLimit)
-                {
-                    Console.WriteLine("\nCan you guess the number I picked");
-                    numberGuess = Console.ReadLine();
-                    guessCount++;
-                    if (numberGuess == myNumber)
-                    {
-                        Console.WriteLine("You got it!");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Try again...\n");
-                    }
-                }
-                else
-                {
-                    outOfGuesses = true;
-                }
-            } while (numberGuess != myNumber && !outOfGuesses);
-            if (outOfGuesses)
-            {
-                Console.WriteLine("You've exhausted the maximum guesses, come back later.");
-            }
-
-            //--------Atm--------
-            string atmPinEntry = "";
-            string atmPIN = "0987";
-            int pinEntryCount = 0;
-            int pinEntryLimit = 3;
-            bool outOfPinEntries = false;
-
-            while (atmPinEntry != atmPIN && !outOfPinEntries)
-            {
-                if (pinEntryCount < pinEntryLimit)
-                {
-                    Console.WriteLine("\nPlease enter a pin");
-                    atmPinEntry = Console.ReadLine();
-                    pinEntryCount++;
-                    if (atmPinEntry == atmPIN)
-                    {
-                        Console.WriteLine("\nWelcome, congrats on entering your PIN correctly!\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Try again...\n");
-                    }
-                }
-                else
-                {
-                    outOfPinEntries = true;
-                    Console.WriteLine("\nSorry, you only get 3 tries to enter a correct PIN. Come back later\n");
-                }
-            }
-            
-          
-        }
+        //-------- THE END --------
     }
 }
-
