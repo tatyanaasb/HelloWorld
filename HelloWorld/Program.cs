@@ -8,10 +8,10 @@ namespace HelloWorld
     class Program
     {
         static void Main(string[] args)
-        {//<----- START
-            //Comment out AND Uncomment areas with brackets specifying "<--START" & "<--FINISH" to not break code while running.
-            //Code is writen this way only for learning purpose of specific subject while having everything in the same place. 
-        }//<----- FINISH
+        //{//<----- START
+        //    //Comment out AND Uncomment areas with brackets specifying "<--START" & "<--FINISH" to not break code while running.
+        //    //Code is writen this way only for learning purpose of specific subject while having everything in the same place. 
+        //}//<----- FINISH
 
 
         //{//<----- START
@@ -510,7 +510,7 @@ namespace HelloWorld
 
         //    while (atmPinEntry != atmPIN && !outOfPinEntries)
         //    {
-        //        if (pinEntryCount < pinEntryLimit)
+        //        if (pinEntryCount<pinEntryLimit)
         //        {
         //            Console.WriteLine("\nPlease enter a pin");
         //            atmPinEntry = Console.ReadLine();
@@ -530,8 +530,42 @@ namespace HelloWorld
         //            Console.WriteLine("\nSorry, you only get 3 tries to enter a correct PIN. Come back later\n");
         //        }
         //    }        
-        //}
         //}//<----- FINISH
+
+
+        //-------- ARRAYS ------------------------------------------------------------------------------------------------------------------------------
+
+        {//<----- START
+            int[] cupValues = new int[4];
+            cupValues[0] = 42;
+            cupValues[1] = 86;
+            cupValues[2] = 31;
+            cupValues[3] = 8;
+            Console.WriteLine(cupValues[0]);
+            Console.WriteLine(cupValues[1]);
+            Console.WriteLine(cupValues[2]);
+            Console.WriteLine(cupValues[3]);
+
+            int numberOfCups = cupValues.Length;
+            Console.WriteLine(numberOfCups);
+            cupValues = new int[2];
+            Console.WriteLine(cupValues.Length);
+
+            string[] randomWords = { "fee", "fie", "foe", "fum" };
+            Console.WriteLine(randomWords[0]);
+            Console.WriteLine(randomWords[1]);
+            Console.WriteLine(randomWords[2]);
+            Console.WriteLine(randomWords[3]);
+
+            string source = "this, that, the other";
+            string[] elements = source.Split(", ");
+
+            Console.WriteLine(elements[0]); 
+            Console.WriteLine(elements[1]); 
+            Console.WriteLine(elements[2]);
+
+        }//<----- FINISH
+
 
 
         //-------- THE END --------
