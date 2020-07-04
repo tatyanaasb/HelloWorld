@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Runtime.CompilerServices;
 
 namespace HelloWorld
@@ -536,6 +537,7 @@ namespace HelloWorld
         //-------- ARRAYS ------------------------------------------------------------------------------------------------------------------------------
 
         {//<----- START
+            //Cups INT
             int[] cupValues = new int[4];
             cupValues[0] = 42;
             cupValues[1] = 86;
@@ -545,25 +547,126 @@ namespace HelloWorld
             Console.WriteLine(cupValues[1]);
             Console.WriteLine(cupValues[2]);
             Console.WriteLine(cupValues[3]);
+            Console.WriteLine();
 
+            //.Length
             int numberOfCups = cupValues.Length;
             Console.WriteLine(numberOfCups);
             cupValues = new int[2];
             Console.WriteLine(cupValues.Length);
+            Console.WriteLine();
 
+            //Words STRING
             string[] randomWords = { "fee", "fie", "foe", "fum" };
             Console.WriteLine(randomWords[0]);
             Console.WriteLine(randomWords[1]);
             Console.WriteLine(randomWords[2]);
             Console.WriteLine(randomWords[3]);
+            Console.WriteLine();
 
+            //Names
+            string[] names3Time = { "August", "June", "May" };
+            Console.WriteLine(names3Time[0]);
+            Console.WriteLine(names3Time[1]);
+            Console.WriteLine(names3Time[2]);
+            Console.WriteLine();
+
+            //GPA
+            string[] gpa5Time = { "3.0", "2.8", "3.2", "4.0", "2.9" };
+            Console.WriteLine(gpa5Time[0]);
+            Console.WriteLine(gpa5Time[1]);
+            Console.WriteLine(gpa5Time[2]);
+            Console.WriteLine(gpa5Time[3]);
+            Console.WriteLine(gpa5Time[4]);
+            Console.WriteLine();
+
+            //Vacation Spots
+            string[] vacationSpots4Time = { "Your", "Top 4", "Vacation", "Spots" };
+            Console.WriteLine(vacationSpots4Time[1]);
+            Console.WriteLine(vacationSpots4Time[0]);
+            Console.WriteLine(vacationSpots4Time[3]);
+            Console.WriteLine(vacationSpots4Time[2]);
+            Console.WriteLine();
+
+            //Last Name 
+            string[] lastNameLength = { "B", "A", "I", "L", "E", "Y" };
+            Console.WriteLine(lastNameLength.Length);
+            Console.WriteLine();
+
+            //.Split
             string source = "this, that, the other";
             string[] elements = source.Split(", ");
-
             Console.WriteLine(elements[0]); 
             Console.WriteLine(elements[1]); 
             Console.WriteLine(elements[2]);
+            Console.WriteLine(elements.Length);
+            Console.WriteLine();
 
+            string sourceLN = "B, A, I, L, E, Y";
+            string[] elementsLN = sourceLN.Split(", ");
+            Console.WriteLine(elementsLN[0]);
+            Console.WriteLine(elementsLN[1]);
+            Console.WriteLine(elementsLN[2]);
+            Console.WriteLine(elementsLN[3]);
+            Console.WriteLine(elementsLN[4]);
+            Console.WriteLine(elementsLN[5]);
+            Console.WriteLine();
+
+            //.ToCharArray()
+            string myName = "Tatyana";
+            char[] letters = myName.ToCharArray();
+            Console.WriteLine("First name initial is " + letters[0]);
+
+            //.IndexOf
+            Console.WriteLine(myName.IndexOf('T'));
+            Console.WriteLine("name".IndexOf('m'));
+            Console.WriteLine("fee, fie, foe, fum".IndexOf("fum"));
+            Console.WriteLine();
+
+            //Names next to me
+            string name4Time = "Mouse, Keyboard, Headphones, Phone";
+            char[] letters4Time = name4Time.ToCharArray();
+            Console.WriteLine("First name initial is " + letters4Time[0]);
+            Console.WriteLine("Second name initial is " + letters4Time[7]);
+            Console.WriteLine("Third name initial is " + letters4Time[17]);
+            Console.WriteLine("Fourth name initial is " + letters4Time[29]);
+            Console.WriteLine();
+
+            int indexRLCount = 1;
+            do
+            {
+                Console.WriteLine("Please enter a name of a peer next to you");
+                string nameAnswer = Console.ReadLine();
+                char[] lettersAnswer = nameAnswer.ToCharArray();
+                Console.WriteLine("First name initial is " + lettersAnswer[0]);
+                Console.WriteLine();
+                indexRLCount++;
+            } while (indexRLCount <= 4);
+
+            //Word contains a letter
+            Console.WriteLine("Please enter a word");
+            string wordAnswerContainer = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Please enter a letter");
+            string letterAnswerContainer = Console.ReadLine();
+            Console.WriteLine();
+            if (wordAnswerContainer.Contains(letterAnswerContainer))
+            {
+                Console.WriteLine("Yep, it's got one of those");
+                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("That letter is not a part of this word");
+                Console.WriteLine();
+            }
+
+            //Split and print 1 or 2
+            string superheros = "Batman, Spiderman, Superman, Thor, Aquaman, Wonder Woman, The Arrow, The Flash";
+            string[] elementsHeros = superheros.Split(", ");
+            Console.WriteLine(elementsHeros[3]);
+            Console.WriteLine(elementsHeros[7]);
+            Console.WriteLine();
         }//<----- FINISH
 
 
