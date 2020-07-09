@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace HelloWorld
 
@@ -696,6 +698,22 @@ namespace HelloWorld
         //-------- LISTS ------------------------------------------------------------------------------------------------------------------------------
 
         {//<----- START
+            //one way
+            List<string> codeWords = new List<string>();
+            codeWords.Add("algorithm");
+            codeWords.Add("abstraction");
+            codeWords.Add("arithmetic operators");
+            codeWords.Insert(2, "parameter"); //inserts the list item on index 2 shifts everything over
+            codeWords.Insert(0, "variable");
+            codeWords.Insert(3, "variable");
+            codeWords.RemoveAt(0);
+            codeWords.Remove("variable");
+            foreach (string words in codeWords)
+            {
+                Console.WriteLine(words + ".");
+            }
+            Console.WriteLine();
+            //--the other way
             List<string> codingWords = new List<string>
             {
                 "abstraction",
@@ -707,9 +725,6 @@ namespace HelloWorld
             codingWords.Add("binary");
             codingWords.Add("variable");
             codingWords.Add("parameter");
-            Console.WriteLine(codingWords);
-            Console.WriteLine("my list has " + codingWords.Count + " elements");
-
             foreach (string word in codingWords)
             {
                 if (word.Equals("abstraction"))
@@ -717,10 +732,29 @@ namespace HelloWorld
                     Console.WriteLine("List has abstraction!");
                 }
             }
-
-
-
-
+            codingWords.Add("assignment operators");
+            codingWords.Add("augmented reality");
+            codingWords.Add("autonomous");
+            codingWords.Add("conditional statements");
+            codingWords.Add("argument");
+            codingWords.Add("compiler");
+            codingWords.Add("computational thinking");
+            codingWords.Add("iteration");
+            Console.WriteLine(codingWords);
+            Console.WriteLine("my list has " + codingWords.Count + " elements");
+            if (codingWords.Contains("iteration"))
+            {
+                Console.WriteLine("List contains iteration");
+            }
+            Console.WriteLine("Parameter is element " + codingWords.IndexOf("parameter"));
+            Console.WriteLine();
+            //Console.WriteLine(codingWords) <---- would not print out the elements of the List
+            //---The FOREACH below actually prints out all elements
+            foreach (string word in codingWords)
+            {
+                Console.WriteLine(word + "! ");
+            }
+            Console.WriteLine();
         }//<----- FINISH
 
 
