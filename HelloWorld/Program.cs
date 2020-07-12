@@ -793,14 +793,16 @@ namespace HelloWorld
                 Console.WriteLine("Student Names " + student.Value);
             }
             Console.WriteLine();
+
             Console.WriteLine("Total currently enrolled: " + students.Count);
+            Console.WriteLine();
+
             students.Add(56789, "Student Four");
             students.Add(23289, "Student Five");
             students.Add(59279, "Student Six");
             students.Add(19268, "Student Seven");
             students.Add(17625, "Student Eight");
             students.Add(10298, "Student Nine");
-            Console.WriteLine();
 
             foreach (var student in students.Keys)
             {
@@ -809,6 +811,13 @@ namespace HelloWorld
             Console.WriteLine();
 
             Console.WriteLine("Total currently enrolled: " + students.Count);
+            Console.WriteLine();
+
+            foreach (var student in students)
+            {
+                Console.WriteLine("The students are " + student.Key + "          " + student.Value);
+            }
+            Console.WriteLine();
         }//<----- FINISH
 
         //-------- THE END --------
