@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Linq;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -695,69 +696,120 @@ namespace HelloWorld
         //}//<----- FINISH
 
 
-        //-------- LISTS ------------------------------------------------------------------------------------------------------------------------------
+        ////-------- LISTS ------------------------------------------------------------------------------------------------------------------------------
+
+        //{//<----- START
+        //    //one way
+        //    List<string> codeWords = new List<string>();
+        //    codeWords.Add("algorithm");
+        //    codeWords.Add("abstraction");
+        //    codeWords.Add("arithmetic operators");
+        //    codeWords.Insert(2, "parameter"); //inserts the list item on index 2 shifts everything over
+        //    codeWords.Insert(0, "variable");
+        //    codeWords.Insert(3, "variable");
+        //    codeWords.RemoveAt(0);
+        //    codeWords.Remove("variable");
+        //    foreach (string words in codeWords)
+        //    {
+        //        Console.WriteLine(words + ".");
+        //    }
+        //    Console.WriteLine();
+
+
+        //    //------the other way in (terms of first set of {}'s and starting words in the list)
+        //    List<string> codingWords = new List<string>
+        //    {
+        //        "abstraction",
+        //        "arithmetic operators",
+        //        "algorithm"
+        //    };
+        //    Console.WriteLine(codingWords);
+        //    Console.WriteLine("my list has " + codingWords.Count + " elements");
+        //    codingWords.Add("binary");
+        //    codingWords.Add("variable");
+        //    codingWords.Add("parameter");
+        //    foreach (string word in codingWords)
+        //    {
+        //        if (word.Equals("abstraction"))
+        //        {
+        //            Console.WriteLine("List has abstraction!");
+        //        }
+        //    }
+        //    codingWords.Add("assignment operators");
+        //    codingWords.Add("augmented reality");
+        //    codingWords.Add("autonomous");
+        //    codingWords.Add("conditional statements");
+        //    codingWords.Add("argument");
+        //    codingWords.Add("compiler");
+        //    codingWords.Add("computational thinking");
+        //    codingWords.Add("iteration");
+        //    Console.WriteLine(codingWords);
+        //    Console.WriteLine("my list has " + codingWords.Count + " elements");
+        //    if (codingWords.Contains("iteration"))
+        //    {
+        //        Console.WriteLine("List contains iteration");
+        //    }
+        //    Console.WriteLine("Parameter is element " + codingWords.IndexOf("parameter"));
+        //    Console.WriteLine();
+        //    //Console.WriteLine(codingWords) <---- would not print out the elements of the List
+        //    //---The FOREACH below actually prints out all elements
+        //    foreach (string word in codingWords)
+        //    {
+        //        Console.WriteLine(word + "! ");
+        //    }
+        //    Console.WriteLine();
+        //    //Simplest way to print all items in List.
+        //    codingWords.ForEach(Console.WriteLine);
+        //}//<----- FINISH
+
+
+        ////-------- DICTIONARIES ------------------------------------------------------------------------------------------------------------------------------
 
         {//<----- START
-            //one way
-            List<string> codeWords = new List<string>();
-            codeWords.Add("algorithm");
-            codeWords.Add("abstraction");
-            codeWords.Add("arithmetic operators");
-            codeWords.Insert(2, "parameter"); //inserts the list item on index 2 shifts everything over
-            codeWords.Insert(0, "variable");
-            codeWords.Insert(3, "variable");
-            codeWords.RemoveAt(0);
-            codeWords.Remove("variable");
-            foreach (string words in codeWords)
+            Dictionary<string, string> prices = new Dictionary<string, string>();
+            prices.Add("menu item two", "34.95");
+            prices.Add("menu item one", "19.95");
+
+            foreach (var kvp in prices)
             {
-                Console.WriteLine(words + ".");
+                Console.WriteLine(kvp.Key + ": $" + kvp.Value);
             }
             Console.WriteLine();
-            //--the other way
-            List<string> codingWords = new List<string>
+
+
+            Dictionary<int, string> students = new Dictionary<int, string>();
+            students.Add(23052, "Student One");
+            students.Add(68929, "Student Two");
+            students.Add(57285, "Student Three");
+
+            foreach (var student in students)
             {
-                "abstraction",
-                "arithmetic operators",
-                "algorithm"
-            };
-            Console.WriteLine(codingWords);
-            Console.WriteLine("my list has " + codingWords.Count + " elements");
-            codingWords.Add("binary");
-            codingWords.Add("variable");
-            codingWords.Add("parameter");
-            foreach (string word in codingWords)
-            {
-                if (word.Equals("abstraction"))
-                {
-                    Console.WriteLine("List has abstraction!");
-                }
-            }
-            codingWords.Add("assignment operators");
-            codingWords.Add("augmented reality");
-            codingWords.Add("autonomous");
-            codingWords.Add("conditional statements");
-            codingWords.Add("argument");
-            codingWords.Add("compiler");
-            codingWords.Add("computational thinking");
-            codingWords.Add("iteration");
-            Console.WriteLine(codingWords);
-            Console.WriteLine("my list has " + codingWords.Count + " elements");
-            if (codingWords.Contains("iteration"))
-            {
-                Console.WriteLine("List contains iteration");
-            }
-            Console.WriteLine("Parameter is element " + codingWords.IndexOf("parameter"));
-            Console.WriteLine();
-            //Console.WriteLine(codingWords) <---- would not print out the elements of the List
-            //---The FOREACH below actually prints out all elements
-            foreach (string word in codingWords)
-            {
-                Console.WriteLine(word + "! ");
+                Console.WriteLine("The students are " + student.Key + "          " + student.Value);
             }
             Console.WriteLine();
+
+            foreach (var student in students)
+            {
+                Console.WriteLine("Student Names " + student.Value);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Total currently enrolled: " + students.Count);
+            students.Add(56789, "Student Four");
+            students.Add(23289, "Student Five");
+            students.Add(59279, "Student Six");
+            students.Add(19268, "Student Seven");
+            students.Add(17625, "Student Eight");
+            students.Add(10298, "Student Nine");
+            Console.WriteLine();
+
+            foreach (var student in students.Keys)
+            {
+                Console.WriteLine("Student ID's " + student);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Total currently enrolled: " + students.Count);
         }//<----- FINISH
-
-
 
         //-------- THE END --------
     }
